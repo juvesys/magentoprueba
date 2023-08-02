@@ -1,0 +1,35 @@
+
+
+<?php
+/*
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+$productCollection = $objectManager->create('Magento\Catalog\Model\ResourceModel\Product\CollectionFactory');
+
+$collection = $productCollection->create()->addAttributeToSelect('*')->load();
+
+foreach ($collection as $product) {
+    echo "<pre>";
+    print_r($product->getData());
+    echo "</pre>";
+}
+*/
+//Bienvenida
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('bienvenida')
+    ->toHtml();
+
+//Imagen Home
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('imagenhome')
+    ->toHtml();
+
+//Productos Recomendados
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('products')
+    ->toHtml();
+
+?>
